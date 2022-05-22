@@ -1,4 +1,5 @@
 import { useState } from "react";
+import star from '../img/star.svg';
 
 //cia Add New movie lentele
 
@@ -82,6 +83,7 @@ function Create({setCreateData}) { //{/*3pasiimam per cia savo setCreateData is 
                         <div className="col-4">
                             <div className="form-group">
                                 <label>Movie rating</label>
+                                <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
                                 <input category="text" className="form-control" onChange={e => inputHandler(e, 'price')} value={rating} />
                                 <small className="form-text text-muted">Movie rating.</small>
                             </div>
