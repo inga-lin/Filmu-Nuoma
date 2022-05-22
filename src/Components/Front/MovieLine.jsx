@@ -1,5 +1,5 @@
 import star from './img/star.svg';
-
+//is Front/MovieLine.jsx
 function MovieLine ({movie}) {
  
     return (

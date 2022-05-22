@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 //import '../bootstrap.css';
-import '../back.scss';
+//import '../back.scss';
 import Create from './Create';
 import MovieEdit from './MovieEdit';
 import Modal from './Modal';

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"; //a.butinas linkams darant. is cia http
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 //import '../bootstrap.css';
-import '../front.scss';
+//import '../front.scss';
 
 function Front({ show }) { //b. pasiemam propsa is App.jsx
 
@@ -13,7 +13,7 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
 
     // Read
     useEffect(() => {
-        axios.get('http://localhost:3004/movies-list/' + show) //b.cia vietoje http://localhost:3003/movies-manager/ rasom http://localhost:3003/movies-list/ ir pridedam propsa show
+        axios.get('http://localhost:3004/filmai-list/' + show) //b.cia vietoje http://localhost:3003/movies-manager/ rasom http://localhost:3003/movies-list/ ir pridedam propsa show
             .then(res => {
                 console.log(res.data);
                 setMovies(res.data);
@@ -49,7 +49,7 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
                     <div className="col-12">
                         <ul className="list-group">
                             {
-                                movies.map(m => <MovieLine key={m.id} tree={m}></MovieLine>)
+                                movies.map(m => <MovieLine key={m.id} movie={m}></MovieLine>)
                             }
                         </ul>
                     </div>

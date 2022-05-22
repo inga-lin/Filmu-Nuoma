@@ -1,5 +1,5 @@
 import star from '../img/star.svg';
-
+//Movie List lentele
 function MovieEdit({ movie, setDeleteId, setModalData }) {
     // movie List lentele
     return (
@@ -9,7 +9,11 @@ function MovieEdit({ movie, setDeleteId, setModalData }) {
                     <span>{movie.title}</span>
                     <span>{movie.pricet} Euro</span>
                     <span>{['Documentary','Family','Animation','Drama','Horror'][movie.category - 1]}</span>
-                    <span><img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>{movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
+                    <div>
+                    <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
+                    <span>{movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
+                    </div>
+                    
                 </div>
                 <div className="movie-line__buttons">
                 <button type="button" className="btn btn-outline-primary m-1" onClick={()=>setModalData(movie)}>Edit</button>
@@ -18,6 +22,6 @@ function MovieEdit({ movie, setDeleteId, setModalData }) {
             </div>
         </li>
     )
-    }
+}
     
     export default MovieEdit;
