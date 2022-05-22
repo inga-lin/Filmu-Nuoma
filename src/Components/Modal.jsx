@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import star from '../img/star.svg';
+//Modalo lentele
 function Modal({setModalData, modalData, setEditData}) {
 //modalData visas medis ant modalo
 //9. is Create.jsx nusikopinam dali kodo

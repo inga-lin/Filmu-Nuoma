@@ -7,7 +7,7 @@ function MovieEdit({ movie, setDeleteId, setModalData }) {
             <div className="movie-line">
                 <div className="movie-line__content">
                     <span>{movie.title}</span>
-                    <span>{movie.pricet} Euro</span>
+                    <span>{movie.price} Euro</span>
                     <span>{['Documentary','Family','Animation','Drama','Horror'][movie.category - 1]}</span>
                     <div>
                     <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>

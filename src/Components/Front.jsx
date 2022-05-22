@@ -5,6 +5,8 @@ import axios from 'axios';
 //import '../bootstrap.css';
 //import '../front.scss';
 
+
+//cia bus ka klientas matys http://localhost:3001  
 function Front({ show }) { //b. pasiemam propsa is App.jsx
 
     const [movies, setMovies] = useState([]);

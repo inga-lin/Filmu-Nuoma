@@ -6,7 +6,7 @@ import Create from './Create';
 import MovieEdit from './MovieEdit';
 import Modal from './Modal';
 
-// cia Tree List lentele
+// cia Movie List lentele su Edit ir Delete
 
 function Back() {
 
