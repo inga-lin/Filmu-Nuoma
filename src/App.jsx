@@ -1,10 +1,11 @@
 
 import './App.css';
+import Create from './Components/Create';
 
 function App() {
   return (
     <div className="App">
-<h1>labasss</h1>
+      <Create></Create>
     </div>
   );
 }
