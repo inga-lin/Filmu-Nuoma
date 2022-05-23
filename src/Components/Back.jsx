@@ -48,7 +48,7 @@ function Back() {
     if (null === editData) {
       return;
     }
-    axios.put('http://localhost:3004/filmai-manager/' + editData.id, editData) //
+    axios.put('http://localhost:3004/filmai-manager/' + editData.id, editData) // !!!!!! nepamirst po manager / padeti
     .then(res => {
       console.log(res);
       setLastUpdate(Date.now());//7paskutinis pakeitimas turi buti dabartine Data
@@ -62,7 +62,7 @@ function Back() {
     if (null === deleteId) {
       return;
     }
-    axios.delete('http://localhost:3004/filmai-manager/' + deleteId.id, ) //cia nepamirsti prie http galo prirasyti / ir prideti deleteId objekta su savybe id(jis istrins visa eilutes info) //delete-istrinti
+    axios.delete('http://localhost:3004/filmai-manager/' + deleteId.id, ) // !!!!!! nepamirst po manager / padeti //cia nepamirsti prie http galo prirasyti / ir prideti deleteId objekta su savybe id(jis istrins visa eilutes info) //delete-istrinti
     .then(res => {
       console.log(res);
       setLastUpdate(Date.now());//7paskutinis pakeitimas turi buti dabartine Data
