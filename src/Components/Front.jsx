@@ -2,6 +2,7 @@ import MovieLine from "./Front/MovieLine";
 import { Link } from "react-router-dom"; //a.butinas linkams darant. is cia https://reactrouter.com/docs/en/v6/getting-started/overview
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../front.css';
 //import '../bootstrap.css';
 //import '../front.scss';
 
@@ -24,38 +25,27 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
 
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                            <a className="navbar-brand" href="/">Movie rent</a>
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
-                            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div className="navbar-nav">
-                                    <Link className="nav-link" to="/">Home</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
-                                    <Link className="nav-link" to="/documentary">Documentary</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
-                                    <Link className="nav-link" to="/family">Family</Link>{/*//a.butinas linkams*/}
-                                    <Link className="nav-link" to="/animation">Animation</Link>{/*//a.butinas linkams*/}
-                                    <Link className="nav-link" to="/drama">Drama</Link>{/*//a.butinas linkams*/}
-                                    <Link className="nav-link" to="/horror">Horror</Link>{/*//a.butinas linkams*/}
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
+            <div className="front-color">
+            <div className="container1">
+                <nav className="navbar">
+                    <a className="Movie-rent" href="/">Movie rent</a>
+                    <div className="navbar-nav">
+                        <Link className="nav-link" to="/">Home</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
+                        <Link className="nav-link" to="/documentary">Documentary</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
+                        <Link className="nav-link" to="/family">Family</Link>{/*//a.butinas linkams*/}
+                        <Link className="nav-link" to="/animation">Animation</Link>{/*//a.butinas linkams*/}
+                        <Link className="nav-link" to="/drama">Drama</Link>{/*//a.butinas linkams*/}
+                        <Link className="nav-link" to="/horror">Horror</Link>{/*//a.butinas linkams*/}
+                    </div>   
+                </nav>
             </div>
-            <div className="container mt-4">
-                <div className="row">
-                    <div className="col-12">
-                        <ul className="list-group">
-                            {
-                                movies.map(m => <MovieLine key={m.id} movie={m}></MovieLine>)
-                            }
-                        </ul>
-                    </div>
-                </div>
+            <div className="container2">
+                <h1 className="title">Movie</h1>
+                <ul className="list-group">
+                    {
+                         movies.map(m => <MovieLine key={m.id} movie={m}></MovieLine>)
+                    }
+                </ul>
             </div>
             <div className="container mt-4">
                 <div className="row">
@@ -75,6 +65,7 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
 
