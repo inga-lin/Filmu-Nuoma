@@ -9,11 +9,8 @@ function MovieEdit({ movie, setDeleteId, setModalData }) {
                     <span>{movie.title}</span>
                     <span>{movie.price} Euro</span>
                     <span>{['Documentary','Family','Animation','Drama','Horror'][movie.category - 1]}</span>
-                    <div>
+                    <span>Rating: {movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
                     <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
-                    <span>{movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
-                    </div>
-                    
                 </div>
                 <div className="movie-line__buttons">
                 <button type="button" className="btn btn-outline-primary m-1" onClick={()=>setModalData(movie)}>Edit</button>

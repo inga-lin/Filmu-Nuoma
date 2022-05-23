@@ -9,10 +9,8 @@ function MovieLine ({movie}) {
                     <span>{movie.title}</span>
                     <span>{movie.price} Euro</span>
                     <span>{['Documentary','Family','Animation','Drama','Horror'][movie.category - 1]}</span>
-                    <div>
-                    <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
-                    <span>{movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
-                    </div>
+                    <span>Rating: {movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
+                    <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>  
                 </div>
             </div>
         </li>

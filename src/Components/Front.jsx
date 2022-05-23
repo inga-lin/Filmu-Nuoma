@@ -47,7 +47,7 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
                     }
                 </ul>
             </div>
-            <div className="container mt-4">
+            <div className="container3 mt-4">
                 <div className="row">
                     <div className="col-12">
                         <div className="arrows">
