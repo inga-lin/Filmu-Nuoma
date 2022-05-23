@@ -48,7 +48,7 @@ function Create({setCreateData}) { //{/*3pasiimam per cia savo setCreateData is 
     }
 
     return (
-        <div className="card m-2">
+        <div className="back-container">
             <div className="card-header">
                 <h2>Add New movie</h2>
             </div>

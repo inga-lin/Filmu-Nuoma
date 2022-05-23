@@ -28,7 +28,7 @@ function Front({ show }) { //b. pasiemam propsa is App.jsx
             <div className="front-color">
             <div className="container1">
                 <nav className="navbar">
-                    <a className="Movie-rent" href="/">Movie rent</a>
+                    <a className="Movie-rent" href="/">Movies rent</a>
                     <div className="navbar-nav">
                         <Link className="nav-link" to="/">Home</Link>  {/*//a.butinas linkams (<Link className="nav-link" to="/">Home</Link>)*/}
                         <Link className="nav-link" to="/documentary">Documentary</Link>{/*//a.butinas linkams /leaf nurodo kaip i ji patekti i http://localhost:3000/leaf*/}
