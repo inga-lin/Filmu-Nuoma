@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import star from '../img/star.svg';
+//import star from '../img/star.svg';
+
 //Modalo lentele
 function Modal({setModalData, modalData, setEditData}) {
 //modalData visas medis ant modalo
@@ -64,30 +65,30 @@ function Modal({setModalData, modalData, setEditData}) {
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Edit movie</h5>
+                        <h5 className="modaltitle" id="exampleModalLabel">Edit movie</h5>
                         <button category="button" className="close" onClick={() => setModalData(null)}>{/*paspaudus x per setModalData(null) bus uzdaroma modallentele */}
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div className="modal-body">
                         <div className="card-body">
-                            <div className="form-group">
-                                <label>movie title</label>
+                            <div className="form-group fg">
+                                <label className='modal-label'>Movie title</label>
                                 <input category="text" className="form-control" onChange={e => inputHandler(e, 'title')} value={title} />
-                                <small className="form-text text-muted">Add new movie name here.</small>
+                                <small className="modalSmallText">Add new movie name here.</small>
                             </div>
                             <div className="container p-0">
                                 <div className="row">
                                     <div className="col-4">
-                                        <div className="form-group">
-                                            <label>movie price</label>
+                                        <div className="form-group fg">
+                                            <label className='modal-label'>Movie price</label>
                                             <input category="text" className="form-control" onChange={e => inputHandler(e, 'price')} value={price} />
-                                            <small className="form-text text-muted">movie price.</small>
+                                            <small className="modalSmallText">Movie price.</small>
                                         </div>
                                     </div>
                                     <div className="col-8">
-                                        <div className="form-group">
-                                            <label>movie category</label>
+                                        <div className="form-group fg">
+                                            <label className='modal-label'>Movie category</label>
                                             <select className="form-control" onChange={e => inputHandler(e, 'category')} value={category}>
                                             <option value="1">Documentary</option>
                                             <option value="2">Family</option>
@@ -95,15 +96,14 @@ function Modal({setModalData, modalData, setEditData}) {
                                             <option value="4">Drama</option>
                                             <option value="5">Horror</option>
                                             </select>
-                                            <small className="form-text text-muted">movie category.</small>
+                                            <small className="modalSmallText">Movie category.</small>
                                         </div>
                                     </div>
                                     <div className="col-4">
-                                        <div className="form-group">
-                                            <label>Movie rating</label>
-                                            <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
+                                        <div className="form-group fg">
+                                            <label className='modal-label'>Movie rating</label>
                                             <input category="text" className="form-control" onChange={e => inputHandler(e, 'rating')} value={rating} />
-                                            <small className="form-text text-muted">Movie rating.</small>
+                                            <small className="modalSmallText">Movie rating.</small>
                                         </div>
                                     </div>
 
@@ -111,9 +111,9 @@ function Modal({setModalData, modalData, setEditData}) {
                             </div>
                         </div>
                     </div>
-                    <div className="modal-footer">
-                        <button category="button" className="btn btn-outline-primary m-3" onClick={buttonHandler}>Save</button>{/*11. nusinulina duomenys is modalo ir uzsidaro lenteles paspaudus save*/}
-                        <button category="button" className="btn btn-outline-danger m-3"  onClick={() => setModalData(null)}>Cancel</button>{/*paspaudus Cancel per setModalData(null) bus uzdaroma modal lentele */}
+                    <div className="modalfooter">
+                        <button category="button" className="buttonSave" onClick={buttonHandler}>Save</button>{/*11. nusinulina duomenys is modalo ir uzsidaro lenteles paspaudus save*/}
+                        <button category="button" className="butonsCancel"  onClick={() => setModalData(null)}>Cancel</button>{/*paspaudus Cancel per setModalData(null) bus uzdaroma modal lentele */}
                     </div>
                 </div>
             </div>
