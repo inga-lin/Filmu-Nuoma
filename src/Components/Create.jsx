@@ -1,5 +1,5 @@
 import { useState } from "react";
-import star from '../img/star.svg';
+//import star from '../img/star.svg';
 
 //cia Add New movie lentele
 
@@ -49,27 +49,27 @@ function Create({setCreateData}) { //{/*3pasiimam per cia savo setCreateData is 
 
     return (
         <div className="back-container">
-            <div className="card-header">
+            <div className="back-title">
                 <h2>Add New movie</h2>
             </div>
-            <div className="card-body">
+            <div className="cardBodyAdd">
                 <div className="form-group">
-                    <label>movie title</label>
+                    <label>Movie title</label>
                     <input category="text" className="form-control" onChange={e => inputHandler(e, 'title')} value={title} />
                     <small className="form-text text-muted">Add new movie name here.</small>
                 </div>
-                <div className="container p-0">
+                <div className="containerMovieGroup">
                     <div className="row">
                         <div className="col-4">
                             <div className="form-group">
-                                <label>movie price</label>
+                                <label>Movie price</label>
                                 <input category="text" className="form-control" onChange={e => inputHandler(e, 'price')} value={price} />
                                 <small className="form-text text-muted">Movie price.</small>
                             </div>
                         </div>
                         <div className="col-8">
                             <div className="form-group">
-                                <label>movie category</label>
+                                <label>Movie category</label>
                                 <select className="form-control" onChange={e => inputHandler(e, 'category')} value={category}>
                                     <option value="1">Documentary</option>
                                     <option value="2">Family</option>
@@ -83,17 +83,17 @@ function Create({setCreateData}) { //{/*3pasiimam per cia savo setCreateData is 
                         <div className="col-4">
                             <div className="form-group">
                                 <label>Movie rating</label>
-                                <img className="star" style={{ width: "45px", height: "45px" }} src={star} alt="star"></img>
                                 <input category="text" className="form-control" onChange={e => inputHandler(e, 'rating')} value={rating} />
                                 <small className="form-text text-muted">Movie rating.</small>
                             </div>
                         </div>
-                        <div className="buttons">
-                        <button category="button" className="btn btn-outline-primary m-3" onClick={buttonHandler}>Add</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
+            <div className="buttonsAdd">
+                        <button className="buttonAdd" onClick={buttonHandler}>Add</button>
+                        </div>
         </div>
     )
 }

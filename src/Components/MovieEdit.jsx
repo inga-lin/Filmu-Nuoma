@@ -5,16 +5,16 @@ function MovieEdit({ movie, setDeleteId, setModalData }) {
     return (
         <li className="list-group-item">
             <div className="movie-line">
-                <div className="movie-line__content">
+                <div className=" movie-line__content mlc">
                     <span>{movie.title}</span>
                     <span>{movie.price} Euro</span>
                     <span>{['Documentary','Family','Animation','Drama','Horror'][movie.category - 1]}</span>
                     <span>Rating: {movie.rating} </span>{/*is masyvo ['Leaf','Spike','Palm'] paimam viena konkretu elementa [movie.type - 1]*/}
                     <img className="star" style={{ width: "25px", height: "25px" }}src={star} alt="star"></img>
                 </div>
-                <div className="movie-line__buttons">
-                <button type="button" className="btn btn-outline-primary m-1" onClick={()=>setModalData(movie)}>Edit</button>
-                <button type="button" className="btn btn-outline-danger m-1" onClick={()=>setDeleteId({id:movie.id})}>Delete</button>
+                <div className="buttonEditDeletle movie-line__buttons">
+                   <button type="button" className="buttonEdit" onClick={()=>setModalData(movie)}>Edit</button>
+                   <button type="button" className="buttonDelete" onClick={()=>setDeleteId({id:movie.id})}>Delete</button>
                 </div>
             </div>
         </li>

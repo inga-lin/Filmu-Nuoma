@@ -80,11 +80,11 @@ function Back() {
         </div>
         <div className="col-8">
           <div className="card m-2">
-            <div className="card-header">
+            <div className="cardMovieList">
               <h2>Movie List</h2>
             </div>
-            <div className="card-body">
-              <ul className="list-group">
+            <div className="MovieListcard-body">
+              <ul className="list-group lg">
                 {
                   movies.map(m => <MovieEdit key={m.id} movie={m} setDeleteId={setDeleteId} setModalData={setModalData}></MovieEdit>)
                 }
